@@ -23,6 +23,6 @@ public class PlantController {
     @GetMapping("/plants/{id}")
     public Plant one(@PathVariable Long id) {
         // Note: we will improve this situation with custom error handling in the next revision
-        return repository.findById(id).orElse(null);
+        return repository.findById(id).orElseThrow(() -> new PlantNotFoundException(id));
     }
 }

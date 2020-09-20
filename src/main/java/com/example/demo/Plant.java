@@ -1,7 +1,11 @@
 package com.example.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Plant {
-    private Long id;
+    private @Id Long id;
     private String genus;
     private String species;
     private String commonName;

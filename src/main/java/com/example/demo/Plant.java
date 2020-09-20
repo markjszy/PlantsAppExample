@@ -9,6 +9,22 @@ public class Plant {
 
     public Plant() {}
 
+    public Plant(Long id, String genus, String species, String commonName, String description) {
+        this.id = id;
+        this.genus = genus;
+        this.species = species;
+        this.commonName = commonName;
+        this.description = description;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getGenus() {
         return genus;
     }

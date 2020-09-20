@@ -1,11 +1,12 @@
 package com.example.demo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Plant {
-    private @Id Long id;
+    private @Id @GeneratedValue Long id;
     private String genus;
     private String species;
     private String commonName;
@@ -13,8 +14,7 @@ public class Plant {
 
     public Plant() {}
 
-    public Plant(Long id, String genus, String species, String commonName, String description) {
-        this.id = id;
+    public Plant(String genus, String species, String commonName, String description) {
         this.genus = genus;
         this.species = species;
         this.commonName = commonName;

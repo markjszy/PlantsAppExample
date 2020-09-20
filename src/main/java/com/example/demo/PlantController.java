@@ -38,7 +38,7 @@ public class PlantController {
         var plant = repository.findById(id).orElseThrow(() -> new PlantNotFoundException(id));
         return EntityModel.of(plant,
                 linkTo(methodOn(PlantController.class).one(id)).withSelfRel(),
-                linkTo(methodOn(PlantController.class).all()).withRel("employees"));
+                linkTo(methodOn(PlantController.class).all()).withRel("plants"));
     }
 
     @PutMapping("/plants/{id}")
